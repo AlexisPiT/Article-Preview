@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Nanum+Gothic+Coding&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 20px;
+    color: hsl(217, 19%, 35%);
+}
+.content_image{
+    width: 80%;;
+    height: 100%;
+}
+.drawers{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.content_info{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.header{
+    padding: 20px 40px 20px 20px;
+}
+.title{
+    font-size: 1.3rem;
+    margin: 0;
+}
+.paragraph{
+    font-size: 1rem;
+    text-align: justify;
+    color: hsl(214, 17%, 51%);
+}
+.bottom{
+    padding: 0 40px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.avatar_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+.profile_image{
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.share_btn{
+    background: hsl(210, 46%, 95%) url(Image/icon-share.svg) no-repeat center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.share{
+    position: absolute;
+    right: 15rem;
+    bottom: 16rem;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+.share_area{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.share::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 105px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid hsl(217, 19%, 35%);
+}
+.share-close-btn{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 800px) {
+
+    .container{
+        height: auto;
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .content_image{
+        width: 100%;
+    }
+    .drawers{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+    .share{
+        right: 2rem;
+        bottom: -5rem;
+        width: 300px;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        gap: 3em;
+    }
+    .share-area{
+        width: 300px;
+    }
+
+    .share::before{
+        display: none;
+    }
+    .share .share-area .share-close-btn {
+        display: none;
+      }
+    .share-close-btn{
+        display: block;
+        background: hsl(210, 46%, 95%) url(Image/icon-share.svg) no-repeat center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+    .hidden{
+        display: none;
+    }
+}
